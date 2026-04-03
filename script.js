@@ -171,9 +171,8 @@ window.sendRSVP = function (btnContext, venueName, coupleNames, nameId, statusId
     btnContext.disabled = true;
 
     // EmailJS Bilgileri
-    const serviceId = 'erolyilmaz9458@gmail.com';
+    const serviceId = 'service_4jtydl6';
     const templateId = 'template_qvsqxnl';
-    const publicKey = 'tH9y7PthJZStF4ua_';
 
     // === AD SOYAD HER YERDE OLMALI ===
     const combinedMessage = `📋 KATILIM BİLDİRİMİ\n━━━━━━━━━━━━━━━━━━━\nAd Soyad: ${fullName}\nGelin & Damat: ${coupleNames}\nMekan: ${venueName}\nKatılım Durumu: ${rsvpStatus}\nKişi Sayısı: ${guestCount}\nNot: ${note || '-'}`;
@@ -196,7 +195,7 @@ window.sendRSVP = function (btnContext, venueName, coupleNames, nameId, statusId
     console.log('📧 Gönderilecek Veriler:', templateParams);
 
     if (typeof emailjs !== 'undefined') {
-        emailjs.send(serviceId, templateId, templateParams, publicKey)
+        emailjs.send(serviceId, templateId, templateParams)
             .then(function () {
                 console.log('✅ EmailJS Başarılı! Ad Soyad:', fullName);
                 alert('✅ Yanıtınız başarıyla iletildi!\n\nAd Soyad: ' + fullName + '\nDurum: ' + rsvpStatus);
