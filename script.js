@@ -7,7 +7,9 @@ const passwords = {
     'kemerhan': 'venue-kemerhan',
     'masal2026': 'venue-tanyildiz',
     'masal': 'venue-tanyildiz',
-    'merve': 'venue-sinanmerve'
+    'merve': 'venue-sinanmerve',
+    'malia': 'venue-malia',
+    'malia2026': 'venue-malia'
 };
 
 // 1. Navigation & Password Logic
@@ -299,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setInterval(update, 1000);
     };
 
-    const venuesData = [{ id: 1, date: '2026-09-14T19:00:00' }, { id: 2, date: '2026-08-22T19:00:00' }, { id: 3, date: '2026-08-06T19:00:00' }];
+    const venuesData = [{ id: 1, date: '2026-09-14T19:00:00' }, { id: 2, date: '2026-08-22T19:00:00' }, { id: 3, date: '2026-08-06T19:00:00' }, { id: 4, date: '2026-09-14T19:00:00' }, { id: 5, date: '2026-11-07T19:00:00' }];
     venuesData.forEach(venue => {
         startCountdown(
             new Date(venue.date),
